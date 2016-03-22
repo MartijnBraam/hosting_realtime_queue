@@ -1,0 +1,5 @@
+name = Hosting realtime task queue
+description = Adds server sent events to the task queue
+package = Hosting
+dependencies[] = hosting_site
+core = 7.x

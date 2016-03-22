@@ -1,0 +1,14 @@
+<?php
+/**
+ * Implements hook_preprocess_views_view_table().
+ */
+function hosting_realtime_queue_preprocess_views_view_table(&$vars) {
+  $id = "{$vars['view']->name}-{$vars['view']->current_display}";
+
+  switch ($id) {
+    case 'hosting_task_list-block':
+      //modalframe_parent_js();
+      drupal_add_js(drupal_get_path('module', 'hosting_realtime_queue') . '/hosting_realtime_queue.js');
+      break;
+  }
+}
